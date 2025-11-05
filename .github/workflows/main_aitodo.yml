@@ -61,9 +61,10 @@ jobs:
         with:
           app-name: 'aitodo'
           slot-name: 'Production'
-          package: ./server
+          package: .
 
           
+
 
 
 
