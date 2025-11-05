@@ -15,15 +15,23 @@ const app = express()
 //Middleware
 
 const allowedOrigins = [
-    "http://localhost:5173/",
-    "https://kind-stone-0508de300.3.azurestaticapps.net/"
-]
+  "http://localhost:5173",
+  "https://kind-stone-0508de300.3.azurestaticapps.net"
+];
 
-app.use(express.json())
-app.use(cors({ 
-    origin: allowedOrigins, 
-    credentials: true 
-}));
+app.use(express.json());
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
 
 app.use(
     helmet({
