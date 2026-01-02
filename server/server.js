@@ -15,7 +15,6 @@ const app = express()
 //Middleware
 
 const allowedOrigins = [
-  "http://localhost:5173",
   "https://kind-stone-0508de300.3.azurestaticapps.net"
 ];
 

@@ -20,7 +20,7 @@ and the AI converts it into structured title & due date
 🧩 Tech Stack
 🖥️ Frontend
 
-- React 18 with Vite
+- React 19 with Vite
 - Redux Toolkit for state management
 - React Router DOM for navigation
 - React Icons for UI elements
